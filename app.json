@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Developed by SAINTLUXPGW",
+    "githubUrl": "https://github.com/SAINTLUX/fokin-weather"
   }
 }
