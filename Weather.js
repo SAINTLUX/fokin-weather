@@ -65,7 +65,7 @@ const weatherOptions = {
       }
 };
 
-export default function Weather({ temp, condition }) {
+export default function Weather({ temp, condition, name }) {
   return (
          <LinearGradient colors={weatherOptions[condition].gradient} 
          style={styles.container}>
@@ -78,6 +78,7 @@ export default function Weather({ temp, condition }) {
             color="white" 
             />
             <Text style={styles.temp}>{temp}º</Text>
+            <Text style={styles.tempSmall}>Here is "{name}"</Text>
         </View>
         <View style={{...styles.halfContainer, ...styles.textContainer}}>
             <Text style={styles.title}>{weatherOptions[condition].title}</Text>
@@ -109,6 +110,10 @@ const styles = StyleSheet.create({
       },
       temp: {
         fontSize: 42,
+        color: "white"
+      },
+      tempSmall: {
+        fontSize: 20,
         color: "white"
       },
       halfContainer: {
